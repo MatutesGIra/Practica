@@ -128,10 +128,10 @@
     git log --graph
 
 | Opción | Descripción |
-| :---------------: |:--------------------------------------------------------- |
-| -p  | Muestra el parche introducido en cada confirmación |
-| --stat | Muestra estadísticas sobre los archivos modificados en cada confirmación|
-| --shortstat| Muestra solamente la línea de resumen de la opción --stat|
+| :---------------: | :--------------------------------------------------------- |
+| -p | Muestra el parche introducido en cada confirmación |
+| --stat | Muestra estadísticas sobre los archivos modificados en cada confirmación |
+| --shortstat | Muestra solamente la línea de resumen de la opción --stat |
 | --name-only | Muestra la lista de archivos afectados |
 | --name-status | Muestra la lista de archivos afectados indicando además si fueron añadidos modificados o eliminados |
 | --abbrev-commit | Muestra solamente los primeros caracteres de la suma SHA-1 en vez de los 40 caracteres de que se compone |
@@ -151,3 +151,51 @@
 | --committer | Muestra sólo aquellas confirmaciones cuyo confirmadorcoincide con la cadena especificada |
 | -S | Muestra sólo aquellas confirmaciones que añaden o eliminen código que corresponda con la cadena especificada |
 
+## Deshacer confirmaciones
+
+    git commit --amend
+    Agregar cosas que olvidaste en la anterior confirmacion
+    ej:
+    git commit -m 'confirmacion inicial'
+    git add archivoOlvidado
+    git commit --amend
+    Aparecera con el mismo nombre de la confirmacion anterior y con el cambio de ahora
+
+## Deshacer archivo preparado
+
+    git reset HEAD nombreArchivo
+    Solo quita de preparado el archivo, no afecta el contenido de este
+
+## Deshacer modificacion de archivo
+
+    git checkout -- nombreArchivo
+    Este si cambia los datos de un archivo, regresandolos a una version anterior
+
+## Repositorio remoto
+
+    Donde estas en tu repositorio
+    git remote
+
+    direccion web del repositorio
+    git remote -v
+
+    añadir repositorio remoto
+    git remote add [nombre] [url]
+
+    traer informacion de repositorios vinculados
+    git fetch [nombre] 
+
+    descargar y fusionar remoto
+    git pull [nombreRemoto] [nombreRama]
+
+    Enviar remotos
+    git push [nombreRemoto] [nombreRama]
+
+    Informacion de remoto
+    git remote show [nombreRemoto]
+
+    renombrar remoto
+    git remote rename [nombreRemoto] [nuevoNombreRemoto]
+
+    eliminar remoto
+    git remote rm [nombreRemoto]
