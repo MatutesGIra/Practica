@@ -6,13 +6,65 @@
 
 ## Clonar Repositorio
 
+    Clonar Repositorio
     git clone [URL] 
     Ej: git clone https://github.com/libgit2/libgit2
+
+    Clonar repositorio con nombre especifico
     git clone [URL] nombre
-    Este clona el repositorio con otro nombre que tu le das
     Ej: git clone https://github.com/libgit2/libgit2 mylibgit
 
 ## Status de los archivos
 
+    Normal
     git status
 
+    Abreviacion
+    git status -s
+    git status --short
+
+## Crear o editar Archivos, configurar .gitignore
+
+    Crear archivos
+    echo 'My Project' > README
+    
+    Modificar archivos
+    echo "echo Hola mundo 2" >> archivo1.sh
+
+    Configurar ignorados
+    echo "*jpg" >> .gitignore
+
+## .gitignore
+
+    ignora los archivos terminados en .a
+    *.a
+
+    pero no lib.a, aun cuando había ignorado los archivos terminados en .a en la línea anterior
+    !lib.a
+
+    ignora unicamente el archivo TODO de la raiz, no subdir/TODO
+    /TODO
+
+    ignora todos los archivos del directorio build/
+    build/
+
+    ignora doc/notes.txt, pero no este: doc/server/arch.txt
+    doc/*.txt
+
+    ignora todos los archivos .txt del directorio doc/
+    doc/**/*.txt
+
+## Status precisos
+
+    lo que esta sin preparar
+    git diff
+
+    lo que esta preparado hasta ahora
+    git diff --cached
+
+    compara cambios preparados
+    git diff --staged
+
+## Confirmar cambios
+
+    git commit -m "Nombre de commit"
