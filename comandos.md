@@ -199,3 +199,34 @@
 
     eliminar remoto
     git remote rm [nombreRemoto]
+
+## Etiquetado
+
+    listar etiquetas
+    git tag
+
+    listar etiquetas especificas
+    git tag -l 'vX*'
+    ej: git tag -l 'v1.8.5*' Te trae todas las versiones de la 1.8.5
+
+    etiquetas anotadas
+    git tag -a vX -m 'nombreVersion'
+
+    etiquetas ligeras (temporales)
+    git tag vX-lw
+
+    etiquetado tardio
+    git log --pretty=oneline
+    git tag -a vX [los 7 caractares inciales del que quieres etiquetar] -m 'vX'
+
+    informacion de etiqueta
+    git show vX
+
+    compartir etiquetas
+    git push [nombreRemoto] [etiqueta]
+
+    compartir todas las etiquetas
+    git push [nombreRemoto] --tags
+
+    sacar etiqueta
+    git checkout -b [nombreNuevaRama] [etiquetaExistente]
