@@ -230,3 +230,17 @@
 
     sacar etiqueta
     git checkout -b [nombreNuevaRama] [etiquetaExistente]
+
+## Alias de comandos
+
+    Cambiar configuracion para crear abreviaciones ejemplos
+    git config --global alias.co checkout
+    git config --global alias.br branch
+    git config --global alias.ci commit
+    git congit --global alias.st status
+
+    git co
+    git br
+    git ci
+    git st
+    
