@@ -87,3 +87,67 @@
 ## Cambiar nombre de archivos
 
     git mv nombre nombreNuevo
+
+## Ver historial de confirmacion
+
+    Mostrar historial completo
+    git log
+
+    Mostrar diferencias entre las confirmacione
+    git log -p
+
+    Mostrar las ultimas dos confirmaciones
+    git log -2
+
+    Mostrar solo algunas estadisticas
+    git log --stat
+
+    Modificar Formato de salida
+    git log --pretty=nombredeformato
+    Hay varias opciones en este: oneline, short, full, fuller. Tambien esta format que te premite crear tu propio formato
+
+|Opción|Descripcion de la salida|
+|:------:|:------------------------:|
+|%H|hash de la confirmacion|
+|%h|hash de la confirmacion abreviado|
+|%T|hash del arbol|
+|%t|hash del arbol abreviado|
+|%P|hashes de las confirmaciones padre|
+|%p|hashes de las confirmaciones padre abreviados|
+|%an|nombre del autor|
+|%ae|dirección de correo del autor|
+|%ad|fecha de autoria (el formato respeta la opcion --date)|
+|%ar|fecha de autoria, relativa|
+|%cn|nombre del confirmador|
+|%ce|dirección de correo del confirmador|
+|%cd|fecha de confirmacion|
+|%cr|fecha de confirmacion, relativa|
+|$s|asunto|
+
+    Mostrar ramificaciones y uniones
+    git log --graph
+
+| Opción | Descripción |
+| :---------------: |:--------------------------------------------------------- |
+| -p  | Muestra el parche introducido en cada confirmación |
+| --stat | Muestra estadísticas sobre los archivos modificados en cada confirmación|
+| --shortstat| Muestra solamente la línea de resumen de la opción --stat|
+| --name-only | Muestra la lista de archivos afectados |
+| --name-status | Muestra la lista de archivos afectados indicando además si fueron añadidos modificados o eliminados |
+| --abbrev-commit | Muestra solamente los primeros caracteres de la suma SHA-1 en vez de los 40 caracteres de que se compone |
+| --relative-date | Muestra la fecha en formato relativo (por ejemplo “2 weeks ago” (“hace 2 semanas”)) en lugar del formato completo |
+| --graph | Muestra un gráfico ASCII con la historia de ramificaciones y uniones |
+| --pretty | Muestra las confirmaciones usando un formato alternativo Posibles opciones son oneline short full fuller y format (mediante el cual puedes especificar tu propio formato) |
+
+    Limitar salida del historial
+    git log -<n>
+
+| Opción | Descripción |
+| :------------------: | :--------------------------------------------------------- |
+| -(n) | Muestra solamente las últimas n confirmaciones |
+| --since y --after | Muestra aquellas confirmaciones hechas después de lafecha especificada |
+| --until y --before | Muestra aquellas confirmaciones hechas antes de la fechaespecificada |
+| --author | Muestra sólo aquellas confirmaciones cuyo autor coincidecon la cadena especificada |
+| --committer | Muestra sólo aquellas confirmaciones cuyo confirmadorcoincide con la cadena especificada |
+| -S | Muestra sólo aquellas confirmaciones que añaden o eliminen código que corresponda con la cadena especificada |
+
