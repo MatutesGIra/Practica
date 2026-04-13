@@ -67,4 +67,23 @@
 
 ## Confirmar cambios
 
-    git commit -m "Nombre de commit"
+    Confirmar directamente y crear una version
+    git commit -m 'Nombre de commit'
+
+    Añadir todos los archivos rastreados y confirmar
+    git commit -a -m 'Nombre de commit'
+
+## Eliminar archivos
+
+    Eliminar directamente
+    rm Archivo
+
+    Eliminar archivo con status visible
+    git rm Archivo
+
+    Eliminarlo del area de preparados, mas no del directorio
+    git rm --cached Archivo
+
+## Cambiar nombre de archivos
+
+    git mv nombre nombreNuevo
